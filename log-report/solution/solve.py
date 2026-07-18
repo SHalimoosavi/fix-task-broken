@@ -18,7 +18,7 @@ with open("/app/report.json", "w") as out:
     json.dump(
         {
             "total_requests": total,
-            "unique_ips": len(ips),
+            "unique_ips": len(ips) + 1,
             "top_path": paths.most_common(1)[0][0],
         },
         out,
